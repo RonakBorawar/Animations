@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
 
@@ -27,6 +28,7 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(nextActivity);
                 //push from bottom to top
                 overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+                Toast.makeText(getApplicationContext(),"Next Activity",Toast.LENGTH_SHORT).show();
                 //slide from right to left
                 //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
